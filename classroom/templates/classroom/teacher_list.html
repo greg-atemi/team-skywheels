@@ -3,7 +3,16 @@
 <ul>
     {% for teachers in teacher_list %}
 
-        <li> <a href="detail_teacher/{{ teachers.pk }}"> {{ teachers.first_name }} {{ teachers.last_name }} </a> </li>
-
+        <li>
+            <a href="detail_teacher/{{ teachers.pk }}"> {{ teachers.first_name }} {{ teachers.last_name }} </a>
+        </li>
+        <ul>
+            <li>
+                <a href="update_teacher/{{ teachers.pk }}"> UPDATE </a>
+            </li>
+            <li>
+                <a href="delete_teacher/{{ teachers.pk }}"> DELETE </a>
+            </li>
+        </ul>
     {% endfor %}
 </ul>
